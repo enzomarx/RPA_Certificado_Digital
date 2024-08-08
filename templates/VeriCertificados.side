@@ -1,0 +1,83 @@
+{
+  "id": "2fd3f876-f7e6-4685-aea4-b0906fea67fd",
+  "version": "2.0",
+  "name": "VeriCertificados",
+  "url": "https://08978175000180.portal-veri.com.br",
+  "tests": [{
+    "id": "05b3b828-7e22-4d6a-bf87-1bb85f688e34",
+    "name": "test23",
+    "commands": [{
+      "id": "4c87f342-b02d-4e61-88e2-da2360fcfea1",
+      "comment": "",
+      "command": "open",
+      "target": "/painel/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24d54f74-1aeb-46c2-93a3-8bb2e616198d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "457ce158-4fcd-4b78-a211-5f99a42ee633",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-md-3:nth-child(3) .ms-3",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-md-3:nth-child(3) .ms-3", "css:finder"],
+        ["xpath=//div[@id='kt_app_content_container']/div/div/div[2]/div/div[3]/a/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/a/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4771c6e8-972b-46ba-ac79-91a26d46e31a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(6) > .col-md-3:nth-child(4) .text-gray-700",
+      "targets": [
+        ["css=.row:nth-child(6) > .col-md-3:nth-child(4) .text-gray-700", "css:finder"],
+        ["xpath=//div[@id='kt_app_content_container']/div/div/div[2]/div/div[2]/div[4]/div/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Certificados')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a45eaa7-df3e-4342-8404-8135795ec683",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buttons-excel > span",
+      "targets": [
+        ["css=.buttons-excel > span", "css:finder"],
+        ["xpath=//div[@id='example_wrapper']/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'EXCEL')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44905b0a-15b0-4dc3-977c-e552433c53d0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.buttons-csv",
+      "targets": [
+        ["css=.buttons-csv", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='example_wrapper']/div/div/div/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'CSV')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ab476849-a3d1-47ed-ae48-df99c19dda0e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["05b3b828-7e22-4d6a-bf87-1bb85f688e34"]
+  }],
+  "urls": ["https://08978175000180.portal-veri.com.br/"],
+  "plugins": []
+}
