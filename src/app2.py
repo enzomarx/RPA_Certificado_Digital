@@ -101,7 +101,7 @@ def run_automation():
 
     # Ações no Dashboard
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".row:nth-child(1) > .col-md-3:nth-child(3) .ms-3"))).click()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".row:nth-child(6) > .col-md-3:nth-child(4) .text-gray-700"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".col-md-3:nth-child(4) a:nth-child(1)"))).click()
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".buttons-excel > span"))).click()
     
     # Aguardar download ser concluído
