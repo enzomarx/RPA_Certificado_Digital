@@ -10,6 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import schedule
 from openpyxl import load_workbook
+from openpyxl.styles import Font, Alignment, PatternFill
 
 # Configurações do Selenium
 download_dir = os.path.expanduser("~/Downloads")  # Diretório de downloads do PC
@@ -50,11 +51,34 @@ def modify_excel(file_path):
     # Desmesclar a célula A1:D1
     ws.unmerge_cells('A1:D1')
     
-    # Modificar o texto da célula A1 (anteriormente mesclada)
+    # Modificar o texto da célula A1 e aplicar negrito
     ws['A1'] = "Relatório Certificado Digital"
+    ws['A1'].font = Font(bold=True)
     
-    # Adicionar o texto "Senha" na célula D2
+    # Adicionar o texto "Senha" na célula D2 e aplicar negrito
     ws['D2'] = "Senha"
+    ws['D2'].font = Font(bold=True)
+    
+    # Adicionar o texto "Vencimento em" na célula E2 e aplicar negrito
+    ws['E2'] = "Vencimento em"
+    ws['E2'].font = Font(bold=True)
+    
+    # Adicionar a fórmula para calcular os dias até o vencimento na coluna E
+    for row in range(3, ws.max_row + 1):  # Começa da linha 3, considerando que a linha 2 tem títulos
+        ws[f'E{row}'] = f"=C{row}-TODAY()"
+        # Aplicar cor vermelha ao texto na coluna E
+        ws[f'E{row}'].font = Font(color="FF0000")
+    
+    # Aplicar cor vermelha ao texto na célula E2
+    ws['E2'].font = Font(bold=True, color="FF0000")
+    
+    # Centralizar o conteúdo da coluna B, com exceção da célula B2
+    for row in range(3, ws.max_row + 1):  # Começa da linha 3
+        ws[f'B{row}'].alignment = Alignment(horizontal='center')
+    
+    # Alinhar à direita o conteúdo da coluna D, com exceção da célula D2
+    for row in range(3, ws.max_row + 1):  # Começa da linha 3
+        ws[f'D{row}'].alignment = Alignment(horizontal='right')
     
     # Salvar as modificações
     wb.save(file_path)
