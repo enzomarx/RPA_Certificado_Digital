@@ -86,9 +86,9 @@ def modify_excel(file_path):
 
 # Função de enviar e-mails
 def send_email():
-    recipients = ["cassandra@controllersbr.com", "ti2.controllersbr@gmail.com", "carlos.junior@controllersbr.com", "joas@controllersbr.com", "lucas@controllersbr.com", "juliocesar@controllersbr.com"]
-    sender_email = "redstarenzo@gmail.com"
-    yag = yagmail.SMTP(sender_email, "evms sijx toii aqxx")
+    recipients = ["@controllersbr.com"]
+    sender_email = "@gmail.com"
+    yag = yagmail.SMTP(sender_email, "xxxx xxxx xxxx xxxx")
     
     # Encontrar o arquivo mais recente
     filename = find_latest_file()
@@ -119,8 +119,8 @@ def run_automation():
     driver.set_window_size(1366, 768)
 
     # Ações no Login
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="kt_sign_in_form"]/div[2]/input'))).send_keys("ti2.controllersbr@gmail.com")  # Ajuste conforme necessário
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="kt_sign_in_form"]/div[3]/input'))).send_keys("senha123")  # Ajuste conforme necessário
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="kt_sign_in_form"]/div[2]/input'))).send_keys("@gmail.com")  # Ajuste conforme necessário
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="kt_sign_in_form"]/div[3]/input'))).send_keys("senha")  # Ajuste conforme necessário
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="kt_sign_in_form"]/div[5]/button'))).click()
 
     # Ações no Dashboard
