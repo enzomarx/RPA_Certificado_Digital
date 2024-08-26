@@ -1,0 +1,66 @@
+{
+  "id": "9e47e51e-8019-485d-b3ff-3add33345dc0",
+  "version": "2.0",
+  "name": "veri",
+  "url": "https://08978175000180.portal-veri.com.br/Painel/home",
+  "tests": [{
+    "id": "6a11a3c9-c8fc-4205-95ba-cc5d5631e8e3",
+    "name": "test",
+    "commands": [{
+      "id": "4d4c73d7-7ea2-498c-ad66-7c1e569db7ab",
+      "comment": "",
+      "command": "open",
+      "target": "https://08978175000180.portal-veri.com.br/Painel/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c35a100-0c66-448e-9ad7-15cfd658b632",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-md-3:nth-child(3) .ms-3",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-md-3:nth-child(3) .ms-3", "css:finder"],
+        ["xpath=//div[@id='kt_app_content_container']/div/div/div[2]/div/div[3]/a/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/a/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76a71c30-c8f8-41da-868f-7eed213d2465",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Próximos ao Vencimento",
+      "targets": [
+        ["linkText=Próximos ao Vencimento", "linkText"],
+        ["css=.col-md-3:nth-child(4) a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Próximos ao Vencimento')]", "xpath:link"],
+        ["xpath=//div[@id='kt_app_content_container']/div/div/div[2]/div/div[2]/div[4]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://08978175000180.portal-veri.com.br/certificado_a1/listar?filtro=PROX_VENCER')]", "xpath:href"],
+        ["xpath=//div[2]/div[4]/div/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Próximos ao Vencimento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "770485b1-d436-4aae-9698-862724ad3428",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buttons-excel > span",
+      "targets": [
+        ["css=.buttons-excel > span", "css:finder"],
+        ["xpath=//div[@id='example_wrapper']/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'EXCEL')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2a5fba2e-b7a5-401e-a26c-0c8d0a426133",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6a11a3c9-c8fc-4205-95ba-cc5d5631e8e3"]
+  }],
+  "urls": [],
+  "plugins": []
+}
