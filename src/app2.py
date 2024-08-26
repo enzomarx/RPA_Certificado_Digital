@@ -86,7 +86,7 @@ def modify_excel(file_path):
 
 # Função de enviar e-mails
 def send_email():
-    recipients = ["ti2.controllersbr@gmail.com"]  # Ajuste conforme necessário
+    recipients = ["cassandra@controllersbr.com", "ti2.controllersbr@gmail.com", "carlos.junior@controllersbr.com", "joas@controllersbr.com", "lucas@controllersbr.com", "juliocesar@controllersbr.com"]
     sender_email = "redstarenzo@gmail.com"
     yag = yagmail.SMTP(sender_email, "evms sijx toii aqxx")
     
